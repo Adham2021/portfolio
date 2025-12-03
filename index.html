@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Shahwan | Backend Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Adham<span>Shahwan</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Backend Engineer</h1>
+                <h2 class="hero-subtitle">Adham Shahwan</h2>
+                <p class="hero-description">
+                    +4 years experience in .NET Core, cloud deployments (Azure), and system integration. 
+                    Passionate about building scalable, secure, and maintainable applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/profile.jpg" alt="Adham Shahwan">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm a Backend Engineer with extensive experience in .NET ecosystem and cloud-based solutions. 
+                    I specialize in building robust APIs, microservices, and integrating complex systems with 
+                    clean architecture principles.
+                </p>
+                <div class="about-info">
+                    <div class="info-item">
+                        <strong>Email:</strong> adham.shahwan94@gmail.com
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone:</strong> 052-7539647
+                    </div>
+                    <div class="info-item">
+                        <strong>Location:</strong> Ramat Gan, Israel
+                    </div>
+                    <div class="info-item">
+                        <strong>Languages:</strong> English, Hebrew, Arabic
+                    </div>
+                </div>
+                <a href="AdhamShahwanResume1.pdf" class="btn btn-outline" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">11/2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Back End Engineer</h3>
+                        <h4>Fitx</h4>
+                        <p>Designed and developed web applications using .NET Core 9.0. Migrated legacy systems to modern .NET Core architecture. Utilized Docker and Azure App Service.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">11/2021 - 11/2024</div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Engineer</h3>
+                        <h4>Sizmek By Amazon / GalilSoftware</h4>
+                        <p>Designed and implemented features using C#, .NET, SQL, HTML, CSS, JavaScript. Experience in micro-services and event-based architectures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">07/2020 - 10/2021</div>
+                    <div class="timeline-content">
+                        <h3>Frontend Web Developer</h3>
+                        <h4>Epsilon Delta</h4>
+                        <p>Extensive development with HTML5, CSS3, JavaScript, Angular 10, TypeScript in tourism and travel solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: FlowX -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>FlowX Backend</h3>
+                        <span class="project-badge">.NET 9</span>
+                    </div>
+                    <p class="project-description">
+                        A comprehensive CRM and document management platform backend with multi-tenant architecture.
+                    </p>
+                    <div class="project-tech">
+                        <span>ASP.NET Core</span>
+                        <span>Entity Framework</span>
+                        <span>Azure Blob</span>
+                        <span>Docker</span>
+                        <span>JWT Auth</span>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Digital Document Signing</li>
+                            <li>WhatsApp Chatbot Integration</li>
+                            <li>Multi-Channel Communication</li>
+                            <li>Role-Based Access Control</li>
+                        </ul>
+                    </div>
+                    <button class="btn-project-details" data-project="flowx">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Project 2: WhatsApp Bot -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>WhatsApp Booking Assistant</h3>
+                        <span class="project-badge">Node.js</span>
+                    </div>
+                    <p class="project-description">
+                        Intelligent WhatsApp chatbot for appointment booking with multilingual support and AI integration.
+                    </p>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>TypeScript</span>
+                        <span>OpenAI GPT</span>
+                        <span>Redis</span>
+                        <span>Azure</span>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Multilingual NLP</li>
+                            <li>Conflict Detection</li>
+                            <li>Session Management</li>
+                            <li>Rate Limiting</li>
+                        </ul>
+                    </div>
+                    <button class="btn-project-details" data-project="whatsapp">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-tags">
+                        <span>.NET Core 9</span>
+                        <span>C#</span>
+                        <span>ASP.NET</span>
+                        <span>Entity Framework</span>
+                        <span>SQL Server</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span>Azure</span>
+                        <span>Docker</span>
+                        <span>CI/CD</span>
+                        <span>App Service</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend & Tools</h3>
+                    <div class="skill-tags">
+                        <span>JavaScript</span>
+                        <span>Angular</span>
+                        <span>HTML/CSS</span>
+                        <span>Git</span>
+                        <span>Postman</span>
+                        <span>Selenium</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Integration</h3>
+                    <div class="skill-tags">
+                        <span>OpenAI API</span>
+                        <span>WhatsApp Integration</span>
+                        <span>Twilio SMS</span>
+                        <span>Azure Blob</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>adham.shahwan94@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>052-7539647</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Ramat Gan, Israel</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/adham-shahwan-220992365" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Adham Shahwan. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
