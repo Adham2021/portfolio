@@ -1,4 +1,4 @@
-// Mobile menu toggle - FIXED
+// Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -52,11 +52,11 @@ const modalBody = document.getElementById('modalBody');
 const projectDetails = {
     flowx: `
         <h2>FlowX Backend System</h2>
-        <p class="modal-subtitle">A comprehensive CRM and document management platform</p>
+        <p class="modal-subtitle">Founder & Lead Developer | 11/2024 - Present</p>
         
         <div class="modal-section">
             <h3><i class="fas fa-bullseye"></i> Purpose</h3>
-            <p>Enterprise multi-tenant solution for client relationship management, digital document signing, and business communication.</p>
+            <p>A comprehensive CRM and document management platform backend. Multi-tenant enterprise solution designed to streamline client relationship management, digital document signing, and business communication.</p>
         </div>
         
         <div class="modal-section">
@@ -68,6 +68,8 @@ const projectDetails = {
                 <span>Docker Containerization</span>
                 <span>JWT Authentication</span>
                 <span>Redis Caching</span>
+                <span>Twilio SMS</span>
+                <span>WhatsApp API</span>
             </div>
         </div>
         
@@ -80,6 +82,8 @@ const projectDetails = {
                 <li><strong>Role-Based Access Control:</strong> Admin, Employee, Manager roles</li>
                 <li><strong>Multi-Channel Communication:</strong> Email, SMS, WhatsApp notifications</li>
                 <li><strong>Clean Architecture:</strong> Repository pattern, dependency injection</li>
+                <li><strong>Client/Lead Management:</strong> Track leads through conversion pipeline</li>
+                <li><strong>Marketing Campaigns:</strong> Manage campaigns across platforms</li>
             </ul>
         </div>
         
@@ -92,32 +96,32 @@ const projectDetails = {
                 </div>
                 <div class="arch-layer">
                     <h4>📦 Services Layer</h4>
-                    <p>Business logic with DTO mapping</p>
+                    <p>Business logic with DTO mapping using AutoMapper</p>
                 </div>
                 <div class="arch-layer">
                     <h4>📦 Repository Layer</h4>
-                    <p>Data access abstraction</p>
+                    <p>Data access abstraction following Repository Pattern</p>
                 </div>
                 <div class="arch-layer">
                     <h4>📦 Models Layer</h4>
-                    <p>Entity Framework models</p>
+                    <p>Entity Framework models with 20+ interconnected tables</p>
                 </div>
             </div>
         </div>
         
         <div class="modal-section">
             <h3><i class="fas fa-lightbulb"></i> Development Notes</h3>
-            <p>Built with clean architecture principles. Utilized AI tools for code generation and optimization. Demonstrates production-ready patterns including rate limiting, health checks, and internationalization support.</p>
+            <p>Built with clean architecture principles. Utilized AI tools for code generation and optimization. Demonstrates production-ready patterns including rate limiting, health checks, and internationalization support (EN, HE, AR).</p>
         </div>
     `,
     
     whatsapp: `
         <h2>WhatsApp Booking Assistant</h2>
-        <p class="modal-subtitle">Intelligent multilingual appointment booking chatbot</p>
+        <p class="modal-subtitle">Backend Developer | Personal Project</p>
         
         <div class="modal-section">
             <h3><i class="fas fa-bullseye"></i> Purpose</h3>
-            <p>Enable businesses to manage appointments through WhatsApp with natural language processing and conflict detection.</p>
+            <p>An intelligent WhatsApp chatbot service that enables businesses to manage appointment bookings directly through WhatsApp. Users can naturally inquire about available slots, book appointments, and receive confirmations in their preferred language (Arabic, Hebrew, or English).</p>
         </div>
         
         <div class="modal-section">
@@ -129,6 +133,8 @@ const projectDetails = {
                 <span>Redis</span>
                 <span>Azure Blob Storage</span>
                 <span>Baileys WhatsApp Library</span>
+                <span>Axios</span>
+                <span>PM2</span>
             </div>
         </div>
         
@@ -141,6 +147,8 @@ const projectDetails = {
                 <li><strong>Rate Limiting:</strong> Redis-based user blocking for spam prevention</li>
                 <li><strong>Natural Language Booking:</strong> Conversational flow without rigid forms</li>
                 <li><strong>Timezone Handling:</strong> Precise Jerusalem timezone conversion</li>
+                <li><strong>Chat State Tracking:</strong> Per-user conversation history preservation</li>
+                <li><strong>Event Management:</strong> Query existing appointments intelligently</li>
             </ul>
         </div>
         
@@ -149,7 +157,7 @@ const projectDetails = {
             <div class="architecture-diagram">
                 <div class="arch-layer">
                     <h4>🔄 WhatsApp Client Layer</h4>
-                    <p>Baileys library with session persistence</p>
+                    <p>Baileys library with session persistence in Azure Blob Storage</p>
                 </div>
                 <div class="arch-layer">
                     <h4>🧠 AI Processing Layer</h4>
@@ -157,11 +165,11 @@ const projectDetails = {
                 </div>
                 <div class="arch-layer">
                     <h4>💾 Data Layer</h4>
-                    <p>Redis for caching, Azure Blob for sessions</p>
+                    <p>Redis for caching and rate limiting, Azure Blob for sessions</p>
                 </div>
                 <div class="arch-layer">
                     <h4>🌐 API Layer</h4>
-                    <p>REST endpoints for session management</p>
+                    <p>REST endpoints for session management with API key validation</p>
                 </div>
             </div>
         </div>
@@ -180,6 +188,7 @@ modalStyle.textContent = `
         color: var(--secondary);
         margin-bottom: 30px;
         font-size: 1.1rem;
+        font-style: italic;
     }
     
     .modal-section {
@@ -279,23 +288,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Form submission
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // In a real application, you would send this to a server
-    console.log('Form submitted:', data);
-    
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
-
 // Add active class to current section in navigation
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
@@ -336,4 +328,15 @@ document.addEventListener('click', (e) => {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
     }
+});
+
+// Add smooth hover effects for contact cards
+document.querySelectorAll('.contact-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
 });
